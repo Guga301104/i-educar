@@ -1062,4 +1062,14 @@ return new class extends clsCadastro
         $this->title = 'Turma';
         $this->processoAp = 586;
     }
+
+    public function Validar()
+    {
+        if ($this->max_aluno <= 0) {
+            $this->mensagem = 'O número máximo de alunos deve ser maior que zero.';
+            return false;
+        }
+
+        return true;
+    }
 };
